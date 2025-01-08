@@ -1,0 +1,125 @@
+.banner {
+    width: 100%;
+    overflow: hidden;
+    height: 750px;
+    position: relative;
+  }
+  
+  .banner-flex {
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;
+    height: 750px;
+    position: relative;
+  }
+  
+  .banner-flex h1, .banner-flex span {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    margin-left: 0px;
+    font-size: 2rem;
+    font-family: TAN - MON CHERI;
+    font-weight: 400;
+    line-height: 60px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    z-index: 100;
+  }
+  
+  .banner-flex img {
+    position: absolute;
+    left: -100px;
+  }
+  
+  .respiracao {
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(
+      circle,
+      rgb(103, 158, 202) 0%,
+      rgba(213, 214, 245, 0) 71%,
+      rgba(254, 255, 241, 0) 100%
+    );
+    border-radius: 50%;
+    animation: breathe 5s ease-in-out infinite;
+    position: absolute; 
+    top: 15%; 
+    transform: translateY(-50%); 
+    right: 26%; 
+  }
+  
+  @keyframes breathe {
+    0%,
+    100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.4);
+    }
+  }
+
+
+@media(max-width:1220px) {
+  .banner-flex h1, .banner-flex span {
+        padding: 20px;
+    }
+
+    .respiracao{
+        right: 12%;
+        top: 25%;
+    }
+}
+@media(max-width:850px) {
+    .respiracao{
+        width: 300px;
+        height: 300px;
+        top: 10%;
+    }
+    .banner {
+    height: 600px;
+    }
+}
+
+@media(max-width:670px) {
+    .respiracao{
+        width: 200px;
+        height: 200px;
+        top: 30%;
+    }
+
+    .banner-flex h1, .banner-flex span{
+        font-size: 1.5rem;
+    }
+
+    .banner-flex {
+        height: 500px;
+    }
+    .banner {
+      height: 450px;
+      }
+}
+
+@media(max-width:550px) {
+    .respiracao{
+        background: radial-gradient(
+            circle,
+            rgb(141, 183, 218) 0%,
+            rgba(213, 214, 245, 0) 71%,
+            rgba(254, 255, 241, 0) 100%
+          );
+    }
+
+    .banner-flex h1, .banner-flex span {
+        background-size: contain;
+        overflow: hidden;
+    }
+}
