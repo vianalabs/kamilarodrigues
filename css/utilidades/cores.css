@@ -1,0 +1,27 @@
+:root {
+    --primaria: #59759a;
+    --secundaria: #dfd8c6;
+    --terciaria: #87a6c7;
+    --wtxt: #f4f2ef;
+    --txt: #292828;
+  }
+  
+  .primaria {
+    color: var(--primaria);
+  }
+  
+  .secundaria {
+    color: var(--secundaria);
+  }
+  
+  .terciaria {
+    color: var(--terciaria);
+  }
+  
+  .txt {
+    color: #292828;
+  }
+  
+  .wtxt {
+    color: var(--wtxt);
+  }
