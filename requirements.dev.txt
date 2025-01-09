@@ -1,0 +1,15 @@
+# dev dependencies
+ipython
+ipdb
+pudb
+pytest
+pytest-watch
+
+# auto reload front-end
+django-browser-reload
+
+# Code Quality
+flake8
+pyproject-flake8
+black
+isort

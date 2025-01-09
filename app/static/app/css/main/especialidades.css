@@ -1,0 +1,56 @@
+.especialidades-cards {
+    display: flex;
+    flex-direction: row;
+    max-width: 900px;
+    gap: 40px;
+    margin: 0 auto 60px auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 10px;
+}
+
+.container-especialidades {
+border: 1px solid var(--secundaria);
+border-radius: 4px 0px 0px 0px;
+border: 1px 0px 0px 0px;
+opacity: 0px;
+width: 227px;
+height: auto;
+justify-content: center;
+padding: 20px;
+align-content: center;
+justify-items: center;
+box-shadow: 0px 4px 10px 0px #00000040;
+transition: background-color 0.6s cubic-bezier(0.25, 1, 0.5, 1), 
+box-shadow 0.6s cubic-bezier(0.25, 1, 0.5, 1), 
+transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+margin: 0 10px;
+}
+
+.container-especialidades:hover {
+    transform: scale(1.03);
+transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.container-especialidades h2 {
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19.2px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+color: var(--primaria);
+margin: 12px 0;
+}
+
+.container-especialidades p {
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16.8px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+color: var(--txt);
+}

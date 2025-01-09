@@ -1,0 +1,53 @@
+[project]
+name = "kamilarodrigues"
+version = "0.1.0"
+description = " Official website of Kamila Rodrigues, a professional therapist."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    { name = "Viana Labs", email = "contacto@vianalabs.pt" }
+]
+dependencies = [
+    "django",
+]
+
+[tool.setuptools.packages]
+find = { where = ["app", "core"] }
+
+[project.optional-dependencies]
+dev = [
+    "flake8",
+    "black",
+    "isort",
+    "pytest",
+    "django-browser-reload",
+]
+
+[tool.flake8]
+exclude = [".venv", "build"]
+max-line-length = 79
+ignore = ""
+
+[tool.black]
+line-length = 79
+target-version = ["py310", "py312"]
+exclude = '''
+/(
+    \.eggs
+  | \.git
+  | \.venv
+  | _build
+  | build
+  | dist
+  | migrations
+)/
+'''
+
+[tool.isort]
+profile = "black"
+src_paths = ["app", "core"]
+multi_line_output = 3
+line_length = 79
+force_grid_wrap = 0
+use_parentheses = true
+include_trailing_comma = true
