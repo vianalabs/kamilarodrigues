@@ -1,14 +1,14 @@
 /* Utilidades */
-@import "/css/utilidades/utilidades.css";
-@import "/css/utilidades/simpleanime.css";
-@import "/css/utilidades/cores.css";
-
+@import "/static/css/utilidades/utilidades.css";
+@import "/static/css/utilidades/cores.css";
+@import "/static/css/utilidades/simpleanime.css";
+@import "/static/fonts/tan-mon-cheri.ttf";
 
 /*Header*/
-@import "/css/header/header.css";
+@import "/static/css/header/header.css";
 
 /*Main*/
-@import "/css/main/banner.css";
-@import "/css/main/especialidades.css";
-@import "/css/main/terapia.css";
-@import "/css/main/sobre.css";
+@import "/static/css/main/banner.css";
+@import "/static/css/main/especialidades.css";
+@import "/static/css/main/sobre.css";
+@import "/static/css/main/terapia.css";
