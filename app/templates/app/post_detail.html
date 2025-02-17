@@ -1,0 +1,13 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block content %}
+    <main>
+        <h1>{{ post.title }}</h1>
+        <p><strong>Autor:</strong> {{ post.author.username }}</p>
+        <p><strong>Categoria:</strong> {{ post.categories.name }}</p>
+        <p><em>Publicado em: {{ post.created_at }}</em></p>
+        <hr>
+        <p>{{ post.content }}</p>
+    </main>
+{% endblock %}
