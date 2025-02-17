@@ -8,7 +8,7 @@ virtualenv:
 	@python -m venv .venv
 
 run:
-	@python manage.py runserver
+	@python3 manage.py runserver
 
 
 ipython:
