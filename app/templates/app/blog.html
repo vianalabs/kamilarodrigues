@@ -13,7 +13,7 @@
                 <p>{{ post.content|truncatewords:30 }}</p>
                 <p><strong>Categoria:</strong> {{ post.categories.name }}</p>
                 <p><em>Publicado em: {{ post.created_at }}</em></p>
-                <a href="{% url 'post_detail' post.id %}">Leia mais</a>
+                <button class="btn-blog"><a href="{% url 'post_detail' post.id %}">Leia mais</a></button>
                 <br><br>
             </li>
         {% empty %}
