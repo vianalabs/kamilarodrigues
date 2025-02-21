@@ -53,5 +53,5 @@ class BlogTestCase(StaticLiveServerTestCase):
         time.sleep(1)
         link = self.driver.find_element(By.CSS_SELECTOR, ".btn-blog a")
         link.click()
-        time.sleep(10)
+        time.sleep(3)
         assert "Autor:" in self.driver.page_source
