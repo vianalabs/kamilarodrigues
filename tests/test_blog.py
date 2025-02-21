@@ -1,5 +1,6 @@
 import time
 from selenium import webdriver
+from selenium.webdriver.common.by import By
 from django.contrib.staticfiles.testing import StaticLiveServerTestCase
 from django.contrib.auth.models import User
 from app.models import Post, Category
@@ -42,3 +43,15 @@ class BlogTestCase(StaticLiveServerTestCase):
         self.driver.get(LOCALHOST_BLOG)
         time.sleep(2)
         assert "<h2>Test the first post</h2>" in self.driver.page_source
+
+
+    def test_positive_open_post_detail(self):
+        """Test opening post detail in Firefox"""
+        LOCALHOST_BLOG = f"{self.live_server_url}/blog/"
+
+        self.driver.get(LOCALHOST_BLOG)
+        time.sleep(1)
+        link = self.driver.find_element(By.CSS_SELECTOR, ".btn-blog a")
+        link.click()
+        time.sleep(10)
+        assert "Autor:" in self.driver.page_source
