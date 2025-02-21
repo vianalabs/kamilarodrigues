@@ -26,7 +26,7 @@ dev = [
 [tool.flake8]
 exclude = [".venv", "build"]
 max-line-length = 79
-ignore = ""
+ignore = "E501"
 
 [tool.black]
 line-length = 79
