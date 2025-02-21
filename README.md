@@ -1,5 +1,7 @@
 # 🌸 Kamila Rodrigues Terapeuta - Website Oficial
 
+[![CI](https://github.com/vianalabs/kamilarodrigues/actions/workflows/main.yml/badge.svg)](https://github.com/vianalabs/kamilarodrigues/actions/workflows/main.yml)
+
 Bem-vindo ao repositório do website oficial de **Kamila Rodrigues**, terapeuta especializada em bem-estar emocional, autocuidado e gestão da ansiedade. Este site foi desenvolvido para oferecer um espaço acolhedor onde visitantes podem conhecer mais sobre os serviços, agendar consultas e explorar conteúdos exclusivos no blog.
 
 ## 🚀 Funcionalidades
