@@ -1,16 +1,21 @@
 import time
 from selenium import webdriver
-from django.test import LiveServerTestCase
+from django.contrib.staticfiles.testing import StaticLiveServerTestCase
 from django.contrib.auth.models import User
 from app.models import Post, Category
 
-
-class BlogTestCase(LiveServerTestCase):
-
+class BlogTestCase(StaticLiveServerTestCase):
     def setUp(self):
-        """Setup Selenium with Chrome and Firefox"""
-        self.chrome_driver = webdriver.Chrome()
-        self.firefox_driver = webdriver.Firefox()
+        """Setup the post and Selenium with Firefox"""
+        firefox_options = webdriver.FirefoxOptions()
+        firefox_options.add_argument('--headless')
+        firefox_options.add_argument('--no-sandbox')
+        firefox_options.add_argument('--disable-dev-shm-usage')
+        firefox_options.unhandled_prompt_behavior = 'accept'
+        
+        self.driver = webdriver.Firefox(options=firefox_options)
+
+        #POST
         self.user = User.objects.create_user(
             username="test",
             password="123456"
@@ -26,13 +31,14 @@ class BlogTestCase(LiveServerTestCase):
 
     
     def tearDown(self):
-        """Close browser after tests"""
-        self.chrome_driver.quit()
-        self.firefox_driver.quit()
+        """Close the browser"""
+        self.driver.quit()
 
-    
     def test_positive_open_blog_page_firefox(self):
-        """Test opening blog page in Chrome"""
-        self.firefox_driver.get(self.live_server_url + '/blog/')
-        time.sleep(30)
-        self.assertIn("<h2>Test the first post</h2>\n", self.firefox_driver.page_source)
+        """Test opening blog page in Firefox"""
+
+        LOCALHOST_BLOG = f"{self.live_server_url}/blog/"
+
+        self.driver.get(LOCALHOST_BLOG)
+        time.sleep(2)
+        assert "<h2>Test the first post</h2>" in self.driver.page_source
