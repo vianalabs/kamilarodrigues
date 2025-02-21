@@ -15,14 +15,14 @@ ipython:
 	@.venv/bin/ipython
 
 test:
-	@.venv/bin/pytest -vs -s
+	@python manage.py test
 
 lint:
-	@.venv/bin/pflake8 app core
+	@.venv/bin/pflake8 app core tests
 
 fmt:
-	@.venv/bin/isort --profile=black -m 3 app core
-	@.venv/bin/black app core
+	@.venv/bin/isort --profile=black -m 3 app core tests
+	@.venv/bin/black app core tests
 
 clean:            ## Clean unused files.
 	@find ./ -name '*.pyc' -exec rm -f {} \;
