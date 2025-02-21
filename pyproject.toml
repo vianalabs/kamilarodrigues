@@ -11,17 +11,18 @@ dependencies = [
     "django",
 ]
 
-[tool.setuptools.packages]
-find = { where = ["app", "core"] }
-
 [project.optional-dependencies]
-dev = [
+test = [
     "flake8",
     "black",
     "isort",
-    "pytest",
-    "django-browser-reload",
+    "selenium",
+    "django_browser_reload",
 ]
+
+[tool.setuptools.packages]
+find = { where = ["app", "core", "tests"] }
+
 
 [tool.flake8]
 exclude = [".venv", "build"]
